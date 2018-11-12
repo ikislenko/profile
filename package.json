@@ -39,6 +39,7 @@
     "mini-css-extract-plugin": "^0.4.4",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "sweetalert": "^2.1.2",
     "vue-loader": "^15.4.2",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
