@@ -53,6 +53,11 @@ module.exports = {
 			template: 'index.html',
 			inject: true
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'loding.html',
+			template: 'loding.html',
+			inject: true
+		}),
 		new CopyWebpackPlugin([{
 			from: resolve('static/img'),
 			to: resolve('dist/static/img'),

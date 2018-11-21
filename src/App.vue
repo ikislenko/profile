@@ -53,6 +53,9 @@ export default {
     createTodo (newTodo) {
       this.todos.push(newTodo)
       sweetalert('Success!', 'To-Do created!', 'success')
+    },
+    sayHello () {
+      sweetalert('Success!', 'Hello!', 'success')
     }
   }
 }
