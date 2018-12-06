@@ -8,6 +8,14 @@ let win,
         width: 1000,
 		height: 700,
 		toolbar: false,
+		// frame: false,
+		// transparent: true,
+        show: false
+    },
+    windowLParams = {
+        width: 760,
+		height: 550,
+		toolbar: false,
 		frame: false,
 		transparent: true,
         show: false
@@ -20,16 +28,16 @@ function createWindow () {
     win.loadFile("./dist/index.html");
     // win.setProgressBar(-1); // hack: force icon refresh
     win.webContents.on('did-finish-load', () => {
-		setTimeout(()=>
-		{
-			win.show();
-			win.frame = true;
-			if (loadingScreen) {
-				let loadingScreenBounds = loadingScreen.getBounds();
-				win.setBounds(loadingScreenBounds);
-				loadingScreen.close();
-			}
-		}, 2000);
+		// setTimeout(()=>
+		// {
+		// 	win.show();
+		// 	win.frame = true;
+		// 	if (loadingScreen) {
+		// 		let loadingScreenBounds = loadingScreen.getBounds();
+		// 		win.setBounds(loadingScreenBounds);
+		// 		loadingScreen.close();
+		// 	}
+		// }, 10000);
     });
 
     // Open the DevTools.
@@ -46,7 +54,7 @@ function createWindow () {
 
 function createLoadingScreen () {
 
-	loadingScreen = new BrowserWindow(Object.assign(windowParams, {parent: win}));
+	loadingScreen = new BrowserWindow(Object.assign(windowLParams, {parent: win}));
 	loadingScreen.transparent = true;
 	// loadingScreen.setMenu(false)
 	// loadingScreen.setFrame(false);
