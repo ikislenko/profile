@@ -28,16 +28,16 @@ function createWindow () {
     win.loadFile("./dist/index.html");
     // win.setProgressBar(-1); // hack: force icon refresh
     win.webContents.on('did-finish-load', () => {
-		// setTimeout(()=>
-		// {
-		// 	win.show();
-		// 	win.frame = true;
-		// 	if (loadingScreen) {
-		// 		let loadingScreenBounds = loadingScreen.getBounds();
-		// 		win.setBounds(loadingScreenBounds);
-		// 		loadingScreen.close();
-		// 	}
-		// }, 10000);
+		setTimeout(()=>
+		{
+			win.show();
+			win.frame = true;
+			if (loadingScreen) {
+				let loadingScreenBounds = loadingScreen.getBounds();
+				win.setBounds(loadingScreenBounds);
+				loadingScreen.close();
+			}
+		}, 10000);
     });
 
     // Open the DevTools.
